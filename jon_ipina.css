@@ -1,0 +1,39 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0%;
+}
+
+nav{
+    display: flex;
+ 
+}
+h1{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 100px;
+}
+
+.menu{
+    border: black solid 1px;
+    color: rgb(7, 5, 5);
+    margin: 0%;
+    padding: 1%;
+    font-size: 12px;
+    font-weight: bold;
+    width: 8%;
+}
+div{
+    display: flex;
+}
+
+#logoa{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    width: 20%;
+    text-align: center;
+    margin-top: 0.5%;
+    font-weight: bold;
+}
+.language{
+    margin: 1px;
+    border: black solid 1px;
+    color: rgb(7, 5, 5);
+}
