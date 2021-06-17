@@ -12,45 +12,27 @@ spanishBotom.addEventListener("click", translateToSpanish)
 englishBotom.addEventListener("click", translateToEnglish)
 basqueBotom.addEventListener("click", translateToBasque)
 
-async function translateToSpanish() {
-    console.log("HOLA 1")
-
-    pageText = await fetch("./translate_es.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(data => data); 
-    console.log(pageText)
-    chargeTraduction()
-    
+function translateToSpanish() {
+    chargeTraduction("./translate_es.json") 
 }
-async function translateToBasque() {
-    console.log("HOLA 1")
 
-    pageText = await fetch("./translate_eus.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(data => data); 
-    console.log(pageText)
-    chargeTraduction()
+function translateToBasque() {
+    chargeTraduction("./translate_eus.json")
     
 }
 
 async function translateToEnglish() {
-    console.log("HOLA 1")
+    chargeTraduction("./translate_en.json")  
+}
 
-    pageText = await fetch("./translate_en.json")
+async function chargeTraduction(languageFile){
+    pageText = await fetch(languageFile)
         .then(response => {
             return response.json();
         })
         .then(data => data); 
     console.log(pageText)
-    chargeTraduction()
-    
-}
 
-function chargeTraduction(){
     for (i=0; i<6; i++) {
         menu[i].innerHTML=pageText.menu[i]
     }
